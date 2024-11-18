@@ -5,15 +5,15 @@ import static org.mockito.Mockito.mock;
 /**
  * Classe de factory pour créer des instances d'IPokedex et des mocks.
  */
-public class PokedexFactoryTestHelper {
+public class IPokedexFactoryTestHelper {
 
     /**
      * Crée un mock de IPokedex.
      *
      * @return Une instance mock de IPokedex.
      */
-    public static IPokedex createMockIPokedex() {
-        return mock(IPokedex.class);
+    public static IPokedexFactory createMockIPokedexFactory() {
+        return mock(IPokedexFactory.class);
     }
 
     /*
@@ -23,5 +23,4 @@ public class PokedexFactoryTestHelper {
      }
      *
      */
-
 }
