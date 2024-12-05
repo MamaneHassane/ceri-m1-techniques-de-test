@@ -3,13 +3,16 @@ package fr.univavignon.pokedex.api;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.mockito.Mockito.when;
 
+import fr.univavignon.pokedex.imp.RocketPokemonFactory;
 import org.junit.jupiter.api.Test;
 
 public class IPokemonFactoryTest {
 
     @Test
     void testCreatePokemon() {
-        IPokemonFactory mockPokemonFactory = IPokemonFactoryTestHelper.createMockIPokemonFactory();
+        // IPokemonFactory mockPokemonFactory = IPokemonFactoryTestHelper.createMockIPokemonFactory();
+
+        IPokemonFactory mockPokemonFactory = new RocketPokemonFactory();
 
         // Crée une instance de Pokemon avec les arguments nécessaires
         int index = 1;
