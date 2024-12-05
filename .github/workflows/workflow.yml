@@ -2,9 +2,9 @@ name: Java CI with Checkstyle and Javadoc
 
 on:
   push:
-    branches: [tp5]
+    branches: [tp6]
   pull_request:
-    branches: [tp5]
+    branches: [tp6]
 
 jobs:
   build:
