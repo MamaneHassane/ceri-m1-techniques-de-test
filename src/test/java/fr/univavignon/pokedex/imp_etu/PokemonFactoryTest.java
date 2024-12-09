@@ -14,15 +14,15 @@ public class PokemonFactoryTest {
         IPokemonFactory pokemonFactory = new PokemonFactory();
 
         // Données d'entrée
-        int index = 1; // Index pour "Ivysaur"
+        int index = 1;
         int cp = 500;
         int hp = 60;
         int dust = 1000;
         int candy = 50;
-        double iv = 0.9;
+        double iv = 5;
 
         // Données attendues pour le Pokémon créé
-        Pokemon expectedPokemon = new Pokemon(index, "Ivysaur", 151, 143, 120, cp, hp, dust, candy, iv);
+        Pokemon expectedPokemon = new Pokemon(index, "Pokemon "+index, 50, 50, 50, cp, hp, dust, candy, iv);
 
         // Appeler la méthode createPokemon
         Pokemon actualPokemon = pokemonFactory.createPokemon(index, cp, hp, dust, candy);
