@@ -4,15 +4,16 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.mockito.Mockito.when;
 
 import fr.univavignon.pokedex.imp.RocketPokemonFactory;
+import fr.univavignon.pokedex.imp_etu.PokemonFactory;
 import org.junit.jupiter.api.Test;
 
 public class IPokemonFactoryTest {
 
     @Test
     void testCreatePokemon() {
-        // IPokemonFactory mockPokemonFactory = IPokemonFactoryTestHelper.createMockIPokemonFactory();
+        IPokemonFactory mockPokemonFactory = IPokemonFactoryTestHelper.createMockIPokemonFactory();
 
-        IPokemonFactory mockPokemonFactory = new RocketPokemonFactory();
+        // IPokemonFactory mockPokemonFactory = new PokemonFactory();
 
         // Crée une instance de Pokemon avec les arguments nécessaires
         int index = 1;
