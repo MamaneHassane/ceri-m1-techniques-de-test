@@ -19,14 +19,19 @@ jobs:
     steps:
       - checkout
       - run:
+          name: Install Maven
+          command: |
+            sudo apt-get update
+            sudo apt-get install -y maven
+      - run:
           name: Install dependencies
-          command: "./mvnw dependency:resolve" # Resolve Maven dependencies
+          command: "mvn dependency:resolve" # Resolve Maven dependencies
       - run:
           name: Run tests
-          command: "./mvnw test" # Run tests using Maven
+          command: "mvn test" # Run tests using Maven
       - run:
           name: Generate coverage report
-          command: "./mvnw jacoco:report" # Generate code coverage report using JaCoCo
+          command: "mvn jacoco:report" # Generate code coverage report using JaCoCo
       - store_artifacts:
           path: target/site/jacoco
           destination: coverage-report
