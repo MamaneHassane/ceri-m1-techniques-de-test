@@ -6,7 +6,7 @@ version: 2.1
 jobs:
   say-hello:
     docker:
-      - image: cimg/base:current
+      - image: cimg/maven:3.9-openjdk-17
     steps:
       - checkout
       - run:
