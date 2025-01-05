@@ -6,7 +6,7 @@ version: 2.1
 jobs:
   say-hello:
     docker:
-      - image: cimg/maven:3.9-openjdk-17
+      - image: cimg/base:current
     steps:
       - checkout
       - run:
@@ -15,7 +15,7 @@ jobs:
 
   run-tests:
     docker:
-      - image: cimg/maven:3.9-openjdk-17 # Utilise une image avec Maven et Java préinstallés
+      - image: cimg/base:current
     steps:
       - checkout
       - run:
